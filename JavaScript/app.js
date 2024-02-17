@@ -1,169 +1,174 @@
-//Complete Arrays 
-
-const numbers = [0, 3.14, 9.81, 37, 98.6, 100] // array of numbers
-const fruits = ['banana', 'orange', 'mango', 'lemon'] // array of strings, fruits
-const vegetables = ['Tomato', 'Potato', 'Cabbage', 'Onion', 'Carrot'] // array of strings, vegetables
-const animalProducts = ['milk', 'meat', 'butter', 'yoghurt'] // array of strings, products
-const webTechs = ['HTML', 'CSS', 'JS', 'React', 'Redux', 'Node', 'MongDB'] // array of web technologies
-const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland'] // array of strings, countries
+/////STRING METHODS//////
 
 
-console.log('numbers',numbers);
-console.log('numbers',numbers.length);
 
-console.log('Fruits',fruits);
-console.log('Fruits',fruits.length)
+let string = '30 Days Of JavaScript'
+console.log(string);
+console.log(string.length);
+console.log(string.toUpperCase());
+console.log(string.toLowerCase());
 
+let slice=string.substr(0,1);
+console.log(slice);
+let pharse=string.slice(3);
+console.log(pharse);
 
-//Using the different data types in Array
+let contain=string.includes('Script');
 
-const arr = [
-    'Asabeneh',                                      
-    250,                                          
-    true,                                          
-    { country: 'Finland', city: 'Helsinki' },       
-    { skills: ['HTML', 'CSS', 'JS', 'React', 'Python'] } 
-];
+console.log(contain);
 
-console.log(arr);
+let split=string.split(" ");
 
-//Split() Method
+console.log(split);
 
-let js='javascript';
-const characters=js.split('')
+let companies='Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon';
 
- console.log(characters);
- let companiesString = 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon'
-const companies = companiesString.split(',')
+let company=companies.split(",");
 
-console.log(companies);
+console.log(company);
 
-//Accessing the array values by using the index
+let replace=string.replace('JavaScript','Python');
 
-let comp=companies[3];
-console.log(comp);
+console.log(replace);
 
-let access=js[0];
-console.log(access);
+console.log(string.charAt(15));
 
-let lastIndex=companies.length-1;
-console.log(companies[lastIndex]);
-
-//Modifying the Array Element
-
-const num=[1,2,3,4,5];
-num[0]=10;
-num[1]=20;
-
-console.log(num);
-
-const countries1=['Ind','SA','NZ','PAK'];
-
-countries1[3]='ENG';
-let lastIndex1=countries1.length-1;
-console.log(countries1[lastIndex1]);
-
-console.log(countries1)
+console.log(string.charCodeAt('j'));
 
 
-//Array Methods 
+console.log(string.search('Of'));
 
-//TO Create an Array (Array constructor)
 
-const array=Array();
-console.log(array);
+console.log('The quote \'There is no exercise better for the heart than reaching down and lifting people up.\' by John Holmes teaches us to help one another.')
 
-//Creating the static values using the fill() Method
+console.log('\"Love is not patronizing and charity isn\'t about pity, it is about love. Charity and love are the same -- with charity you give love, so don\'t just give money but reach out your hand instead.\"');
 
-const staticValues=Array(4).fill('x');
-console.log(staticValues);
 
-//Concating the two Arrays
+let num='10';
+let num1=10;
 
-const firstArray=[1,2,3,4,5];
-
-const secondArray=[6,7,8,9,4];
-
-const thirdArray=firstArray.concat(secondArray);
-
-console.log(thirdArray);
-
-//Getting the Array length
-
-console.log('the length of array:',thirdArray.length);
-
-//Getting the index of array
-
-console.log('the index of 3 is:',thirdArray.indexOf(3));
-console.log('the index of 7 is:',thirdArray.indexOf(7));
-
-//Check the element if it exists in an Array (indexOf() & include() methods)
-
-//Using the IndexOf() Method return -1 does not exists
-
-let elementTOSearch=thirdArray.indexOf(0);
-
-if(elementTOSearch!=-1){
-    console.log("the element exists in array");
+if(typeof num == typeof num1){
+    console.log('both the numbers are equal')
 }else{
-    console.log('the element does not exists in an array');
+        num=+num;
+        if(typeof num == typeof num){
+            console.log('now, the types are exactly same')
+        }
 }
 
-//Using the Include() Method return True/Flase
+let num2='9.8';
 
-let elementToCheck=6;
+let num3=10;
 
-if(thirdArray.includes(elementToCheck)){
-    console.log('the element is exists in an array');
+let numFloat=parseFloat(num2);
+
+if(numFloat == num3){
+    console.log('both are same');
 }else{
-    console.log('the element is not exists in an array');
+    numFloat=Math.ceil(numFloat);
+    if(numFloat==num3){
+        console.log('now both are same');
+    }
+    
 }
 
-//Ternary Operator
 
-elementTOSearch === -1 ? console.log('the element does not exits') :
-console.log('the element is exists in an array');
+let str='python';
+let str1='jargon';
 
-
-//Getting LastIndex of an element in array
-
-console.log(thirdArray.lastIndexOf(4));
-
-//Converting Array to String
-console.log(thirdArray.toString());
-console.log(fruits.toString());
+if(str.includes('on') && str1.includes('on')){
+    console.log('on is found on both python as well as jargon');
+}else{
+    console.log('on is not found on python and jargon');
+}
 
 
-//Joining Array Elements
+let str3='I hope this course is not full of jargon';
 
-console.log(countries.join(' #'));
-
-//Slice Array Elements
-
-console.log(thirdArray.slice(0,2)); //[1,2]
-
-//Splice Method in Array
-
-const num1=[1,2,3,4,5,6];
-const splice=(num1.splice(3,3,7));
-console.log(splice);
-
-//Adding and Removing the Element in an array
-thirdArray.push(10); //Adding at the end of array
-console.log(thirdArray);
-
-thirdArray.unshift(0);
-console.log(thirdArray);//Adding the element at the starting
-
-thirdArray.pop(10);
-console.log(thirdArray) //Removing the element at he End
-
-thirdArray.shift(0);
-console.log(thirdArray);//Removing the element at the starting
-
-//Reverse() and Sort() Method
-
-console.log(countries.reverse());
+if(str3.includes('jargon')){
+    console.log('found at');
+}
 
 
-console.log(countries.sort());
+let randNum=Math.random();
+
+console.log(randNum * 10);
+
+let randomNumber = Math.floor(Math.random() * 256);
+console.log(randomNumber);
+
+let str5='Javascript';
+
+let randIndex=Math.floor(Math.random() * str5.length);
+let randcharIndex=str5.charAt(randIndex);
+
+console.log(`The random characters found at ${randIndex}: ${randcharIndex}`);
+
+console.log('1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125');
+
+for(let i=1;i<=5;i++){
+
+}
+
+let sentence = 'You cannot end a sentence with because because because is a conjunction';
+let phrase = sentence.substr(sentence.indexOf('because'), 24);
+console.log(phrase);
+
+
+let sent='love is the best thing in this world. Some found their love and some are still looking for their love.'
+
+
+let wordToSearch='love';
+
+let words=sent.split(' ');
+
+let count=0;
+
+for(let i=0;i<words.length;i++){
+
+    if(words[i].toLowerCase()===wordToSearch){
+        count++
+    }
+}
+console.log(words);
+console.log(`the word ${wordToSearch} apears ${count} times`);
+
+
+let sentence1 = 'love is the best thing in this world. Some found their love and some are still looking for their love.';
+let wordToSearch1 = 'love';
+let words1 = sentence1.split(' ');
+let count1 = 0;
+
+for (let i = 0; i < words1.length; i++) {
+    // Convert both the word to search for and the word from the sentence to lowercase for case-insensitive comparison
+    if (words1[i].toLowerCase() === wordToSearch1) {
+        count1++;
+    }
+}
+
+
+
+console.log(`The word '${wordToSearch1}' appears ${count1} times in the sentence.`)
+let sentence2 = 'You cannot end a sentence with because because because is a conjunction';
+let wordToSearch2 = 'because';
+
+let count2 = (sentence2.match(new RegExp(wordToSearch2, 'gi')) || []).length;
+
+console.log(`The word '${wordToSearch2}' appears ${count2} times in the sentence.`);
+
+
+let text = 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.';
+
+// Regular expression to match numbers
+let regex = /\d+/g;
+
+// Extract numbers from the text
+let numbers = text.match(regex);
+
+// Convert numbers to integers and sum them up
+let totalAnnualIncome = numbers.reduce((acc, curr) => acc + parseInt(curr), 0);
+
+console.log(`The total annual income is ${totalAnnualIncome} euro.`);
+
+
+console.log("*******************************************************************************");
