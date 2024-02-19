@@ -236,3 +236,35 @@ const fullStack = [
   const nextLine=flattendArray.join("\n");
 
   console.log(nextLine);
+
+  const arr6=[];
+
+  for(let arr of array){
+
+    if(arr.includes('LAND')){
+        arr6.push(arr);
+    }
+  }
+
+  console.log(arr6);
+
+
+  const arr7=[];
+
+  let maxLength1=0;
+
+  for(let arr of array){
+    if(arr.length>maxLength1){
+        maxLength1=arr;
+        arr7.push(maxLength1);
+    }
+  }
+
+  console.log(arr7);
+
+  
+  
+  const countriesWithLand = array.filter(country => country.toLowerCase().includes('land'));
+  
+  console.log(countriesWithLand);
+  
