@@ -167,3 +167,220 @@ console.log(countries.reverse());
 
 
 console.log(countries.sort());
+
+const numbers1 = [1, 2, 3, 4, 5, 6]
+numbers1.splice(3, 3, 7, 8, 9)
+console.log(numbers1.splice(3, 3, 7, 8, 9))  // -> [1, 2, 3, 7, 8, 9] //it removes three item and replace three items
+console.log(numbers1)
+
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+ const backEnd = ['Node','Express', 'MongoDB']
+ const fullStack = [frontEnd, backEnd]
+ console.log(fullStack)  
+
+ const flatened=fullStack.flat();
+
+ console.log(flatened);
+
+ const arr2=[1,2,3,4,5,6];
+ console.log(arr2);
+ console.log('the length of array',arr2.length)
+
+ const firstItem=arr2[0];
+ console.log(firstItem);
+
+ const middleIndex=Math.floor(arr2.length / 2);
+ let middleItem;
+ if(arr2.length % 2 ==0){
+    middleItem=[middleIndex];
+
+ }else{
+    middleItem=arr2[middleIndex];
+ }
+ console.log(middleItem)
+
+ const LastItem=arr2.length-1;
+ console.log(arr2[LastItem]);
+
+ const mixedDataTypes=[
+    number=240,
+    Boolean=true,
+    name='Prasahant',
+    car={
+        carColor:'red',
+        Wheel:4,
+        model:'UpperHand'
+    }
+ ]
+
+ console.log(mixedDataTypes);
+
+ const itCompanies=['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle','Amazon']
+
+ console.log(itCompanies);
+
+let firstComapany=itCompanies[0];
+
+console.log(firstComapany);
+
+const middleIndex1=Math.floor(itCompanies.length /2);
+
+let middleItem1;
+
+if(itCompanies.length % 2=== 0){
+
+    middleItem1=[itCompanies[middleIndex1-1],itCompanies[middleIndex1]]
+}else{
+    middleItem1=itCompanies[middleIndex1]
+}
+console.log(middleItem1)
+
+let lastComapany=itCompanies.length-1;
+
+console.log(itCompanies[lastComapany]);
+
+for(comp of itCompanies){
+    console.log([comp]);
+   
+}
+for(comp of itCompanies){
+    let upper=comp.toUpperCase();
+    console.log(upper);
+}
+
+let searchCompany='Google';
+
+if(itCompanies.includes(searchCompany)){
+    console.log(searchCompany);
+}else{
+    console.log("does\'nt exists");
+}
+ 
+const sort=itCompanies.sort();
+console.log(sort);
+
+
+
+const slice=itCompanies.slice(0,3);
+console.log(slice);
+
+const middle=Math.floor(itCompanies.length / 2);
+
+let item;
+let item1;
+
+if(itCompanies.length % 2 === 0){
+
+    item=[middle-1],item1=[middle]
+}else{
+    item=[middle];
+    item1=[middle+1]
+}
+const middleCompanies=itCompanies.slice(item,item1);
+console.log(middleCompanies)
+
+
+const remove=itCompanies.pop();
+console.log(remove);
+
+const removeMiddle=Math.floor(itCompanies.length/2)
+
+let removeMid;
+
+if(itCompanies.length % 2 === 0){
+
+    removeMid=itCompanies.pop();
+}
+console.log(removeMid)
+
+const shoppingCart=['Milk','Coffe','Tea','Honey'];
+
+//const addMeat='Meat';
+
+if(shoppingCart.includes('Meat')){
+    console.log("Already exists")
+}else{
+    shoppingCart.unshift('Meat')
+    console.log("the meat is added to shopping cart")
+   
+}
+console.log(shoppingCart)
+
+if(shoppingCart.includes('Sugar')){
+    console.log("the sugar is already exits")
+}else{
+    shoppingCart.push('Sugar');
+    console.log("the Sugar is added to shopping cart")
+}
+console.log(shoppingCart)
+
+if(shoppingCart.includes('Tea')){
+   const replace= shoppingCart.indexOf('Tea')
+
+   shoppingCart[replace]='Green Tea';
+}
+
+console.log(shoppingCart)
+
+
+if(shoppingCart.includes('Honey')){
+        const index=shoppingCart.indexOf('Honey');
+        shoppingCart.splice(index,1);
+}
+console.log(shoppingCart)
+
+const countries2 = [
+    'Albania',
+    'Bolivia',
+    'Canada',
+    'Denmark',
+    'Ethiopia',
+    'Finland',
+    'Germany',
+    'Hungary',
+    'Ireland',
+    'Japan',
+    'Kenya'
+  ]
+  
+  let countryToSearch="Ethiopia";
+
+  let include=countries2.includes(countryToSearch);
+
+  if(include){
+    console.log("ETHIOPIA")
+  }else{
+    countries2.push("Ethiopia")
+    console.log(countries2)
+  }
+  
+  const webTechs1 = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Redux',
+    'Node',
+    'MongoDB',
+    'Sass'
+  ]
+
+  const eleToSearch='Sass';
+
+  const include1=webTechs1.includes('Sass');
+
+  if(!include1){
+   webTechs1.push('Sass')
+
+  }else{
+   const inde= webTechs1.indexOf('Sass')
+   webTechs1[inde]='Css'
+  }
+  console.log(webTechs1)
+
+const frontEnd1 = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd1 = ['Node','Express', 'MongoDB']
+
+const fullStack1= [frontEnd1,backEnd1];
+const flatened1=fullStack1.flat()
+console.log(flatened1)
