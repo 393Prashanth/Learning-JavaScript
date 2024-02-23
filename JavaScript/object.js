@@ -154,3 +154,50 @@ console.log(pointsGreater)
 console.log(loggedin)
 
 
+// Heigher Order Functions
+
+function s(){
+  console.log('the output from b')
+}
+
+function a(b){
+  s();
+  return 'this from a';
+  
+}
+
+const c=a(s);
+console.log(c)
+
+
+function callback(n){
+  return n ** 2;
+}
+
+const cube = (callback,n) =>{
+  return callback(n) * n;
+}
+console.log(callback(2))
+console.log(cube(callback,3));
+
+
+const SumArray = (callback1,number) =>{
+  callback1(number);
+  let sum=0;
+    const Addnum=function(element){
+        sum+=element
+        }
+        number.forEach(Addnum)
+        return sum;
+
+}
+
+const callback1 = (arr) =>{
+    let sum=0;
+    arr.forEach(element => {
+        sum+=element;
+    });
+    return sum;
+}
+console.log(callback1(arr))
+console.log(SumArray(callback1,arr))
