@@ -24,7 +24,7 @@ console.log(values)
 console.log(calculator(5,3,subst));
 console.log(calculator(2,3,prod))
 
-/*const url = 'https://restcountries.com/v2/all' 
+const url = 'https://restcountries.com/v2/all' 
 const getCountries= async () =>{
     
     const response=await fetch(url);
@@ -66,7 +66,7 @@ const fetchData = async () => {
     }
   }
   fetchData()
-*/
+
 
   //Closure
 
