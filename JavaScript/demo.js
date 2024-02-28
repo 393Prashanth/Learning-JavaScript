@@ -100,7 +100,7 @@ const printCountries = async () =>{
     
     const countries=await getCountries();
     const countrylist=countries.map(name=>name.name);
-    const countriesContainer=document.getElementById('container');
+    const countriesContainer=document.getElementById('container-list');
     countrylist.forEach(country=>{
         const divContainer=document.createElement('div');
         divContainer.textContent=country;
@@ -108,3 +108,19 @@ const printCountries = async () =>{
     })
 }
 printCountries();
+
+
+
+
+
+const button=document.querySelector('button')
+button.addEventListener('click',function(){
+
+const numberRange=document.getElementById('number');
+for(let i=0;i<100;i++){
+    const divContainer=document.createElement('div');
+    divContainer.textContent=i;
+    numberRange.appendChild(divContainer)
+}
+
+});
