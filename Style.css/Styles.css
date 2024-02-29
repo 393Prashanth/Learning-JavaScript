@@ -1,0 +1,38 @@
+.box1{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    
+}
+.box2{
+    background-color:darkgreen;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+.box3{
+    background-color:blueviolet;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+.box4{
+    background-color:brown;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+.box5{
+    background-color:darkgoldenrod;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+.flex-example{
+    display: flex;
+    justify-content: space-evenly;
+    border:3px solid black;
+    Space
+}
